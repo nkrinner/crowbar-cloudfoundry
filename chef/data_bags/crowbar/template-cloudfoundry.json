@@ -1,0 +1,35 @@
+{
+  "id": "template-cloudfoundry",
+  "description": "Installation for Cloud Foundry",
+  "attributes": {
+    "cloudfoundry": {
+      "debug": false,
+      "verbose": true,
+    }
+  },
+  "deployment": {
+    "cloudfoundry": {
+      "crowbar-revision": 0,
+      "crowbar-applied": false,
+      "schema-revision": 0,
+      "element_states": {
+        "cloudfoundry": [ "readying", "ready", "applying" ]
+      },
+      "elements": {},
+      "element_order": [
+        [ "cloudfoundry" ]
+      ],
+      "element_run_list_order": {
+        "cloudfoundry": 110
+      },
+      "config": {
+        "environment": "cloudfoundry-base-config",
+        "mode": "full",
+        "transitions": false,
+        "transition_list": [
+        ]
+      }
+    }
+  }
+}
+
